@@ -22,9 +22,5 @@ admin.initializeApp({
     gracehop: {
       date_of_birth: "December 9, 1906",
       full_name: "Grace Hopper"
-    },
-    Nastepny:{
-      rekord1: "dane1",
-      rekord2:"dane2"
     }
   });

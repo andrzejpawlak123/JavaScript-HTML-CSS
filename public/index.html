@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Welcome to My Page</title>
+    <link rel="stylesheet" type="text/css" href="css/styl.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+</head>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.11.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.11.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.11.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.11.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.11.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+<body>
+    <h1>Nagłówek</h1>
+    <hr>
+    <h1>Gallery</h1>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
+    <div class="gallery">
+        <a href="images/random1.jpg" data-lightbox="cos"><img src="images/random1.jpg"></a>
+        <a href="images/random2.jpg" data-lightbox="cos"><img src="images/random2.jpg"></a>
+        <a href="images/random3.jpg" data-lightbox="cos"><img src="images/random3.jpg"></a>
+        <a href="images/random4.jpg" data-lightbox="cos"><img src="images/random4.jpg"></a>
+        <a href="images/random5.jpg" data-lightbox="cos"><img src="images/random5.jpg"></a>
+        <a href="images/random6.jpg" data-lightbox="cos"><img src="images/random6.jpg"></a>
+        <a href="images/random7.jpg" data-lightbox="cos"><img src="images/random7.jpg"></a>
+        <a href="images/random8.jpg" data-lightbox="cos"><img src="images/random8.jpg"></a>
+        <a href="images/random9.jpg" data-lightbox="cos"><img src="images/random9.jpg"></a>
+        <a href="images/random10.jpg" data-lightbox="cos"><img src="images/random10.jpg"></a>
+        <a href="images/random11.jpg" data-lightbox="cos"><img src="images/random11.jpg"></a>
+        <a href="images/random12.jpg" data-lightbox="cos"><img src="images/random12.jpg"></a>
+        <!--<a href="images/random13.jpg" data-lightbox="cos" ><img src="images/random13.jpg"></a>-->
 
 
-    <h1  align="center"> Sample text !</h1>
-    <div id="message">
-      <h2>Welcome Andrzej</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script src="scripts/lightbox-plus-jquery.min.js"></script>
+
+
+    <hr>
+    <h1>Alert</h1>
+    <div class="clock">
+        <button onclick="setTimeout(myFunction, 3000)">Try it</button>
+    </div>
+    <script>
+        function myFunction() {
+            alert('Hello, you use "try it" ');
+        }
+    </script>
+    <hr>
+    <h1>Stop Time</h1>
+    <div class="clock">
+        <p id="demo"></p>
+        <button onclick="clearInterval(myVar)">Stop time</button>
+        <button onclick="setInterval(myTimer ,1000)">Start time</button>
+    </div>
+    <!--   pobranie i wyświetlenie czasu systemowego  -->
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        var myVar = setInterval(myTimer, 1000);
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
         }
-      });
     </script>
-  </body>
+    <hr>
+    <!--  clock with pics 0-9   -->
+    <script type="text/javascript" src="scripts/clock.js"></script>
+
+    <div class="clock">
+        <h1>Clock</h1>
+        <p id="test"></p>
+        <img name="hour" width="35" height="50">
+        <img name="hour2" width="35" height="50">
+        <img src="images/s.jpg" alt="" width="15" height="50">
+        <img name="minute" width="35" height="50">
+        <img name="minute2" width="35" height="50">
+        <img src="images/s.jpg" alt="" width="15" height="50">
+        <img name="second" width="35" height="50">
+        <img name="second2" width="35" height="50">
+    </div>
+    <hr>
+    <h1>Drop'n'Drag</h1>
+    <!--Drop'n'Drag-->
+    <div class="empty">
+        <div class="fill" draggable="true"></div>
+    </div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+
+    <script src="scripts/dropndrag.js"></script>
+    <hr>
+</body>
+
 </html>

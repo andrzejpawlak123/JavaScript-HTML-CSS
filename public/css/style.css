@@ -1,0 +1,50 @@
+body h1{
+
+  background-color: white;
+  color: brown;
+  text-align: center;
+}
+
+.gallery img{
+height: 200px;
+width: 210px;
+padding: 3px;
+filter: grayscale(100%);
+transition: 1s;
+cursor: zoom-in;
+
+}
+.gallery img:hover{
+
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+.clock{
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.clock img{
+  display: inline-block;
+}
+
+.fill {
+background-image: url(../images/images1.jpeg);
+width: 200px;
+height: 200px;
+position: relative;
+top: 5px;
+left: 5px;
+cursor: move;
+
+}
+.empty {
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid goldenrod;
+  height: 210px;
+  width: 210px;
+}
+
