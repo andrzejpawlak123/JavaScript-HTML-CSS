@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Login</h1>
+    <script src="scripts/login.js"></script>
+
+    <form action="" class="login">
+        <input type="text" name="login" id="login" value="zzz@zzz.zzz">
+        <input type="password" name="password" id="password" value="123">
+        <button type="submit" onclick="log()" class="button1">Sign in</button>
+        <button class="button" onclick="reg()" type="submit">Registry</button>
+    </form>
+    <script>
+        function log() {
+            var login = document.getElementById('login').value;
+            var password = document.getElementById('password').value;
+            window.alert("From log() function\nLogin: " + login + "\nPassword: " + password);
+
+        }
+
+        function reg() {
+            var login = document.getElementById('login').value;
+            var password = document.getElementById('password').value;
+            window.alert("From reg() function\nLogin: " + login + "\nPassword: " + password);
+
+        }
+    </script>
+
+</body>
+
+</html>

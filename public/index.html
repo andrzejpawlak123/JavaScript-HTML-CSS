@@ -5,12 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to My Page</title>
-    <link rel="stylesheet" type="text/css" href="css/styl.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
 </head>
 
 <body>
-    <h1>Nagłówek</h1>
+    <div>
+        <a href="login.html">
+            <button class="buttonLogin">Sign in</button>
+        </a>
+    </div>
+    <h1>Projects</h1>
     <hr>
     <h1>Gallery</h1>
 
@@ -27,14 +32,51 @@
         <a href="images/random10.jpg" data-lightbox="cos"><img src="images/random10.jpg"></a>
         <a href="images/random11.jpg" data-lightbox="cos"><img src="images/random11.jpg"></a>
         <a href="images/random12.jpg" data-lightbox="cos"><img src="images/random12.jpg"></a>
-        <!--<a href="images/random13.jpg" data-lightbox="cos" ><img src="images/random13.jpg"></a>-->
-
-
     </div>
 
     <script src="scripts/lightbox-plus-jquery.min.js"></script>
+    <hr>
+    <h1>Calculator</h1>
+    <!--Calculator-->
+    <div id="container">
+        <div id="calculator">
+            <div id="result">
+                <div id="history">
+                    <p id="history-value"></p>
+                </div>
+                <div id="output">
+                    <p id="output-value"></p>
+                </div>
+            </div>
+            <div id="keyboard">
+                <button class="operator" id="clear">C</button>
+                <button class="operator" id="backspace">CE</button>
+                <button class="operator" id="%">%</button>
+                <button class="operator" id="/">&#247;</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operator" id="*">&times;</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operator" id="-">-</button>
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operator" id="+">+</button>
+                <button class="empty_calc" id=""></button>
+                <button class="number" id="0">0</button>
+                <button class="empty_calc" id=""></button>
+                <button class="operator" id="=">=</button>
 
 
+            </div>
+
+        </div>
+
+    </div>
+    <script src="scripts/calculator.js"></script>
     <hr>
     <h1>Alert</h1>
     <div class="clock">
@@ -67,7 +109,7 @@
     <script type="text/javascript" src="scripts/clock.js"></script>
 
     <div class="clock">
-        <h1>Clock</h1>
+        <h1>Clock with pictures</h1>
         <p id="test"></p>
         <img name="hour" width="35" height="50">
         <img name="hour2" width="35" height="50">
