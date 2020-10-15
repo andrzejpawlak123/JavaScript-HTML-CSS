@@ -18,3 +18,17 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+
+var login = document.getElementById('button').value;
+var password = document.getElementById('button1').value;
+
+function log() {
+    window.alert("From log() function\nLogin: " + login + "\nPassword: " + password);
+
+}
+
+function reg() {
+    window.alert("From reg() function\nLogin: " + login + "\nPassword: " + password);
+
+}

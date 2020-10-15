@@ -7,6 +7,18 @@
     <title>Welcome to My Page</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.11.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.11.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.11.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.11.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.11.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+
 </head>
 
 <body>
@@ -15,7 +27,7 @@
             <button class="buttonLogin">Sign in</button>
         </a>
     </div>
-    <h1>Projects</h1>
+    <h1 id="top">Projects</h1>
     <hr>
     <h1>Gallery</h1>
 
@@ -78,7 +90,7 @@
     </div>
     <script src="scripts/calculator.js"></script>
     <hr>
-    <h1>Alert</h1>
+    <!--   <h1>Alert</h1>
     <div class="clock">
         <button onclick="setTimeout(myFunction, 3000)">Try it</button>
     </div>
@@ -88,6 +100,7 @@
         }
     </script>
     <hr>
+-->
     <h1>Stop Time</h1>
     <div class="clock">
         <p id="demo"></p>
